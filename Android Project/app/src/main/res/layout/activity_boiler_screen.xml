@@ -1,0 +1,262 @@
+<?xml version="1.0" encoding="utf-8"?>
+<GridLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:paddingBottom="@dimen/activity_vertical_margin"
+    android:paddingLeft="@dimen/activity_horizontal_margin"
+    android:paddingRight="@dimen/activity_horizontal_margin"
+    android:paddingTop="@dimen/activity_vertical_margin"
+    tools:context=".activityPackage.BoilerScreen"
+    android:background="#aeb7cc">
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceLarge"
+        android:text="@string/appTitle"
+        android:layout_row="0"
+        android:layout_column="0"
+        android:layout_gravity="center_horizontal"
+        android:layout_marginBottom="10dp" />
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="3dp"
+        android:layout_row="1"
+        android:layout_column="0"
+        android:background="@color/colorPrimaryDark"/>
+
+    <GridLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_row="2"
+        android:layout_column="0">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textAppearance="?android:attr/textAppearanceLarge"
+            android:text="@string/boilerTitle"
+            android:layout_row="0"
+            android:layout_column="0"
+            android:layout_gravity="center_horizontal"
+            android:layout_marginTop="15dp"
+            android:layout_marginBottom="5dp" />
+
+        <GridLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_row="1"
+            android:layout_column="0"
+            android:background="@drawable/panelshape">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textAppearance="?android:attr/textAppearanceMedium"
+                android:text="@string/boilerSwitchText"
+                android:layout_row="0"
+                android:layout_column="0"
+                android:layout_marginLeft="15dp"
+                android:layout_marginStart="15dp"
+                android:layout_marginTop="8dp"
+                android:textColor="#434e79" />
+
+            <Switch
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/bosBoilerSwitch"
+                android:layout_row="0"
+                android:layout_column="1"
+                android:layout_gravity="end"
+                android:layout_marginTop="6dp"
+                android:layout_marginRight="15dp"
+                android:layout_marginEnd="15dp"
+                android:textColor="@android:color/holo_orange_dark"
+                android:textStyle="bold" />
+
+        </GridLayout>
+    </GridLayout>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceLarge"
+        android:layout_row="3"
+        android:layout_column="0"
+        android:layout_gravity="center_horizontal"
+        android:text="@string/timeScheduleText"
+        android:layout_marginTop="15dp"
+        android:layout_marginBottom="5dp" />
+
+    <GridLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_row="4"
+        android:layout_column="0"
+        android:background="@drawable/panelshape">
+
+        <CheckBox
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/enableText"
+            android:id="@+id/bosTurnOnTimeBox"
+            android:layout_row="0"
+            android:layout_column="0"
+            android:textColor="#757578"
+            android:textSize="18sp"
+            android:layout_marginLeft="5dp"
+            android:layout_marginStart="5dp"
+            android:layout_marginTop="5dp"
+            android:focusable="false"
+            android:focusableInTouchMode="false"
+            android:clickable="false"/>
+
+        <CheckBox
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/disableText"
+            android:id="@+id/bosTurnOffTimeBox"
+            android:layout_row="1"
+            android:layout_column="0"
+            android:textSize="18sp"
+            android:textColor="#757578"
+            android:layout_marginLeft="5dp"
+            android:layout_marginStart="5dp"
+            android:layout_marginBottom="5dp"
+            android:focusable="false"
+            android:focusableInTouchMode="false"
+            android:clickable="false"/>
+
+        <EditText
+            android:layout_width="140dp"
+            android:layout_height="wrap_content"
+            android:inputType="time"
+            android:imeOptions="actionDone"
+            android:ems="10"
+            android:id="@+id/bosTurnOnTimeField"
+            android:layout_row="0"
+            android:layout_column="1"
+            android:layout_gravity="end"
+            android:layout_marginRight="12dp"
+            android:layout_marginEnd="12dp"
+            android:layout_marginTop="5dp" />
+
+        <EditText
+            android:layout_width="140dp"
+            android:layout_height="wrap_content"
+            android:inputType="time"
+            android:imeOptions="actionDone"
+            android:ems="10"
+            android:id="@+id/bosTurnOffTimeField"
+            android:layout_row="1"
+            android:layout_column="1"
+            android:layout_gravity="end"
+            android:layout_marginRight="12dp"
+            android:layout_marginEnd="12dp"
+            android:layout_marginBottom="5dp" />
+    </GridLayout>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceLarge"
+        android:text="@string/sensorScheduleText"
+        android:layout_row="5"
+        android:layout_column="0"
+        android:layout_gravity="center_horizontal"
+        android:layout_marginTop="15sp"
+        android:layout_marginBottom="5dp" />
+
+    <GridLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_row="6"
+        android:layout_column="0"
+        android:background="@drawable/panelshape">
+
+        <CheckBox
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/enableText"
+            android:id="@+id/bosTurnOnSensorBox"
+            android:layout_row="0"
+            android:layout_column="0"
+            android:textColor="#757578"
+            android:textSize="18sp"
+            android:layout_marginLeft="5dp"
+            android:layout_marginStart="5dp"
+            android:layout_marginTop="5dp"
+            android:focusable="false"
+            android:focusableInTouchMode="false"
+            android:clickable="false"/>
+
+        <CheckBox
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/disableText"
+            android:id="@+id/bosTurnOffSensorBox"
+            android:layout_row="1"
+            android:layout_column="0"
+            android:textSize="18sp"
+            android:textColor="#757578"
+            android:layout_marginLeft="5dp"
+            android:layout_marginStart="5dp"
+            android:layout_marginBottom="5dp" />
+
+        <EditText
+            android:layout_width="80dp"
+            android:layout_height="wrap_content"
+            android:inputType="number"
+            android:imeOptions="actionDone"
+            android:ems="10"
+            android:id="@+id/bosTurnOnSensorField"
+            android:layout_row="0"
+            android:layout_column="1"
+            android:layout_gravity="center_horizontal"
+            android:layout_marginTop="5dp" />
+
+        <EditText
+            android:layout_width="80dp"
+            android:layout_height="wrap_content"
+            android:inputType="number"
+            android:imeOptions="actionDone"
+            android:ems="10"
+            android:id="@+id/bosTurnOffSensorField"
+            android:layout_row="1"
+            android:layout_column="1"
+            android:layout_gravity="center_horizontal"
+            android:layout_marginBottom="5dp" />
+    </GridLayout>
+
+    <GridLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_row="7"
+        android:layout_column="0">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textAppearance="?android:attr/textAppearanceMedium"
+            android:text="@string/hotWaterText"
+            android:layout_row="0"
+            android:layout_column="0"
+            android:layout_marginTop="15dp"
+            android:textStyle="bold" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textAppearance="?android:attr/textAppearanceMedium"
+            android:id="@+id/bosHotWaterText"
+            android:layout_row="0"
+            android:layout_column="1"
+            android:layout_gravity="end"
+            android:layout_marginTop="15dp"
+            android:textStyle="bold" />
+    </GridLayout>
+
+
+</GridLayout>
